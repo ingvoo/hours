@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div>
+  <div class="container mx-auto">
+    <div class="flex justify-between w-full">
       <h3>Project Name</h3>
       <h4>Task</h4>
     </div>
