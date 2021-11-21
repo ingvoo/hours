@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Time',
     component: () => import('../views/Time.vue'),
   },
+  {
+    path: '/edit/:id',
+    name: 'Edit',
+    component: () => import('../views/Edit.vue'),
+  },
 ]
 
 const router = createRouter({

@@ -9,7 +9,9 @@
       <button class="ml-2 border p-2" @click="entryStart(item.id)">
         Start
       </button>
-      <button class="ml-2 border p-2" @click="entryEdit(id)">Edit</button>
+      <button class="ml-2 border p-2" @click="entryEdit(item.id)">
+        Edit item {{ item.id }}
+      </button>
     </div>
   </div>
 </template>
@@ -27,16 +29,12 @@ export default {
     entryStart(id: number) {
       // TODO: filter the collection by the id not just pass it in there.
       // const item: object = this.items[id]
-      // console.log(item)
       // item.timerStart = new Date.now();
     },
 
     entryEdit(id: number) {
-      console.log(id)
-      // TODO: route to this item
+      this.$router.push(`/edit/${id}`)
     },
   },
 }
 </script>
-
-<style scoped></style>
