@@ -1,31 +1,44 @@
 <template>
   <div class="container mx-auto">
     <h2 class="text-xl font-bold">19. November 2021</h2>
-    <div class="flex justify-between border-t mt-4 py-2">
-      <div>
-        <h3 class="text-xl font-bold">Ljomi</h3>
-        <h4 class="text-lg font-bold">Learning Vue 3 with TS</h4>
-      </div>
-      <div class="flex items-center">
-        <span>{{ counter }} Minutes </span>
-        <button class="ml-2 border p-2" @click="timerStart">Start</button>
-        <button class="ml-2 border p-2">Edit</button>
-      </div>
-    </div>
+    <section class="mt-4">
+      <entry-day v-for="item in items" :key="item.id" :item="item" />
+    </section>
   </div>
 </template>
 
 <script lang="ts">
+import EntryDay from '@/components/EntryDay.vue'
+
 export default {
+  components: {
+    EntryDay,
+  },
   data() {
     return {
-      counter: 120,
+      items: [
+        {
+          id: 0,
+          client: 'Ljomi',
+          task: 'Develop',
+
+          // Maybe best to use either durtation or start/end timer and not both
+          duration: 180,
+          timerStart: null,
+          timerEnd: null,
+        },
+        {
+          id: 1,
+          client: 'Fast Forward',
+          task: 'Meeting',
+
+          // Maybe best to use either durtation or start/end timer and not both
+          duration: 30,
+          timerStart: null,
+          timerEnd: null,
+        },
+      ],
     }
-  },
-  methods: {
-    timerStart() {
-      this.counter++
-    },
   },
 }
 </script>
