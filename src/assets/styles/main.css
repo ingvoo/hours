@@ -1,3 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ----------------------------------------*\
+  MAIN
+\* ---------------------------------------- */
+
+/**
+* Base
+*/
+@import 'tailwindcss/base';
+/* @import './base.postcss'; */
+
+/**
+* Components
+*/
+@import 'tailwindcss/components';
+@import './components/button.postcss';
+
+/**
+* Vendors
+*/
+/* purgecss start ignore */
+/* Sometimes we need to exclude vendors here so I leave this here */
+/* purgecss end ignore */
+
+/**
+* Utilities
+*/
+@import 'tailwindcss/utilities';
