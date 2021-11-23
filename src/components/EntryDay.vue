@@ -1,21 +1,23 @@
 <template>
   <div class="flex justify-between border-t py-3">
     <div>
-      <h3 class="text-lg font-bold">{{ item.client }}</h3>
-      <h4 class="font-bold">{{ item.task }}</h4>
+      <h3 class="text-lg font-bold">{{ item?.client }}</h3>
+      <h4 class="font-bold">{{ item?.task }}</h4>
     </div>
     <div class="flex items-center">
-      <span>{{ item.duration }} minutes </span>
-      <button class="button ml-2" @click="entryStart(item.id)">Start</button>
-      <button class="button ml-2" @click="entryEdit(item.id)">
-        Edit item {{ item.id }}
+      <span>{{ item?.duration }} minutes </span>
+      <!-- <button class="button ml-2" @click="entryStart(item?.id)">Start</button> -->
+      <button class="button ml-2" @click="entryEdit(item?.id)">
+        Edit item {{ item?.id }}
       </button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     item: {
       type: Object,
@@ -39,5 +41,5 @@ export default {
       this.$router.push(`/edit/${this.item?.id}`)
     },
   },
-}
+})
 </script>

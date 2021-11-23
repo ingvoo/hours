@@ -8,12 +8,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue'
 import EntryDay from '@/components/EntryDay.vue'
 
-export default {
-  components: {
-    EntryDay,
-  },
+export default defineComponent({
   data() {
     return {
       items: [
@@ -21,7 +19,6 @@ export default {
           id: 0,
           client: 'Ljomi',
           task: 'Develop',
-
           // Maybe best to use either durtation or start/end timer and not both
           duration: 180,
           timerStart: null,
@@ -31,8 +28,6 @@ export default {
           id: 1,
           client: 'Fast Forward',
           task: 'Meeting',
-
-          // Maybe best to use either durtation or start/end timer and not both
           duration: 30,
           timerStart: null,
           timerEnd: null,
@@ -40,5 +35,8 @@ export default {
       ],
     }
   },
-}
+  components: {
+    EntryDay,
+  },
+})
 </script>

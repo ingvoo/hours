@@ -1,10 +1,18 @@
 <template>
   <div>
     <div class="container mx-auto">
-      <p class="text-center">Edit id: {{ id }}</p>
-      <label class="block" for="duration">Duration</label>
-      <input type="text" value="2" placeholder="00:00" />
-      <div class="flex justify-center mt-4">
+      <h1 class="text-lg font-bold">Edit id: {{ id }}</h1>
+      <label class="block mt-4" for="duration">Duration</label>
+      <input id="duration" type="text" value="2" placeholder="00:00" />
+
+      <label class="block mt-4" for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <div class="mt-4">
         <button class="button">Save</button>
         <!-- Temporary handler to go back -->
         <!-- Nice would be to add smooth transition when routing -->
@@ -14,15 +22,15 @@
   </div>
 </template>
 
-<script>
-// TODO: create that form
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
+  // TODO: query the details from the ID
   computed: {
-    // TODO: query the details from the ID
     id() {
       return this.$route.params.id
     },
   },
-}
+})
 </script>
