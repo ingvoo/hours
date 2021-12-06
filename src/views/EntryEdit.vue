@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="container mx-auto">
+      {{ $store.state.entry }}
       <h1 class="text-lg font-bold">Edit id: {{ id }}</h1>
-      <label class="block mt-4" for="duration">Duration</label>
-      <input id="duration" type="text" value="2" placeholder="00:00" />
+
+      <app-input label="Client" v-model="entry.client" />
+      <app-input label="Task" v-model="entry.task" />
+      <app-input label="Duration" v-model="entry.duration" />
+      <app-input label="Description" v-model="entry.description" />
 
       <label class="block mt-4" for="description">Description</label>
       <textarea
@@ -24,13 +28,23 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import AppInput from '@/components/AppInput.vue'
 
 export default defineComponent({
-  // TODO: query the details from the ID
+  components: {
+    AppInput,
+  },
+
+  props: ['id'],
+
   computed: {
-    id() {
-      return this.$route.params.id
+    entry() {
+      return this.$store.state.entry
     },
+  },
+
+  created() {
+    this.$store.dispatch('getEntry', this.id)
   },
 })
 </script>

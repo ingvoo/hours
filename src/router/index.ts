@@ -23,9 +23,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/EntryCreate.vue'),
   },
   {
-    path: '/edit/:id',
-    name: 'Edit',
-    component: () => import('../views/Edit.vue'),
+    path: '/entry-edit/:id',
+    name: 'EntryEdit',
+    props: true,
+    component: () => import('../views/EntryEdit.vue'),
   },
 ]
 

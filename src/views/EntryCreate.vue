@@ -12,9 +12,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import AppInput from '@/components/AppInput.vue'
 
 import { v4 as uuidv4 } from 'uuid'
+
+import AppInput from '@/components/AppInput.vue'
 
 export default defineComponent({
   components: {
@@ -36,9 +37,12 @@ export default defineComponent({
 
   methods: {
     createEntry() {
-      this.entry.id = uuidv4()
-      this.entry.user = this.$store.state.user
-      console.log(this.entry)
+      const entry = {
+        ...this.entry,
+        id: uuidv4(),
+        user: this.$store.state.user,
+      }
+      this.$store.dispatch('createEntry', entry)
     },
   },
 })

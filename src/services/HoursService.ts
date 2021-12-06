@@ -21,8 +21,8 @@ export default {
   },
 
   // eslint-disable-next-line
-  postEntry(entries: object) {
-    return apiClient.post('/entries', entries)
+  postEntry(entry: object) {
+    return apiClient.post('/entries', entry)
   },
 
   // eslint-disable-next-line

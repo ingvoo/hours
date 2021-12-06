@@ -7,9 +7,12 @@
     <div class="flex items-center">
       <span>{{ item?.duration }} minutes </span>
       <!-- <button class="button ml-2" @click="entryStart(item?.id)">Start</button> -->
-      <button class="button ml-2" @click="entryEdit">
-        Edit item {{ item?.id }}
-      </button>
+      <router-link
+        :to="{ name: 'EntryEdit', params: { id: item.id } }"
+        class="button ml-2"
+      >
+        Edit
+      </router-link>
     </div>
   </div>
 </template>
@@ -22,23 +25,6 @@ export default defineComponent({
     item: {
       type: Object,
       required: false,
-    },
-  },
-  methods: {
-    // TODO: What to do if a user pauses the times?
-    // entryStart(id: number) {
-    // TODO: filter the collection by the id not just pass it in there.
-    // const item: object = this.items[id]
-    // item.timerStart = new Date.now();
-    // },
-
-    // TODO: Enable TS again and refactor to this
-    // entryEdit(id: number) {
-    //   this.$router.push(`/edit/${id}`)
-    // },
-
-    entryEdit() {
-      this.$router.push(`/edit/${this.item?.id}`)
     },
   },
 })
