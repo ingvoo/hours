@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "id": "0",
+      "client": "Ljomi",
+      "task": "Develop",
+      "description": "lorem ipsum",
+      "duration": "45",
+      "user": "ingvoo"
+    },
+    {
+      "id": "1",
+      "client": "fastforward",
+      "task": "Develop",
+      "description": "lorem ipsum",
+      "duration": "45",
+      "user": "ingvoo"
+    },
+    {
+      "id": "2",
+      "client": "Arkio",
+      "task": "Meeting",
+      "description": "lorem ipsum dolor",
+      "duration": "30",
+      "user": "ingvoo"
+    }
+  ],
+  "clients": [
+    {
+      "id": "0",
+      "title": "Arkio",
+      "description": "lorem dolor"
+    },
+    {
+      "id": "1",
+      "title": "fastforward",
+      "description": "lorem dolor"
+    }
+  ]
+}
