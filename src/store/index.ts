@@ -33,14 +33,20 @@ export default createStore({
         })
     },
 
-    getEntry({ commit }, id) {
-      HoursService.getEntry(id)
-        .then((response) => {
-          commit('SET_ENTRY', response.data)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+    getEntry({ commit, state }, id) {
+      const existingEntry = state.entries.find((e: any) => e.id === id)
+
+      if (!existingEntry) {
+        HoursService.getEntry(id)
+          .then((response) => {
+            commit('SET_ENTRY', response.data)
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      } else {
+        state.entry = existingEntry
+      }
     },
 
     createEntry({ commit }, entry) {
