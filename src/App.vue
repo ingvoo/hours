@@ -1,6 +1,9 @@
 <template>
   <app-menu />
-  <router-view class="mt-8" />
+  <aside class="relative" id="notification-bar"></aside>
+  <div class="mt-8">
+    <router-view />
+  </div>
   <app-footer class="mt-8" />
 </template>
 

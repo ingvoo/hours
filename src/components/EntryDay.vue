@@ -13,6 +13,9 @@
       >
         Edit
       </router-link>
+      <button class="button button-danger ml-2" @click="deleteEntry(item.id)">
+        Delete
+      </button>
     </div>
   </div>
 </template>
@@ -25,6 +28,13 @@ export default defineComponent({
     item: {
       type: Object,
       required: false,
+    },
+  },
+
+  methods: {
+    deleteEntry(id: string) {
+      console.log(id)
+      this.$store.dispatch('deleteEntry', id)
     },
   },
 })

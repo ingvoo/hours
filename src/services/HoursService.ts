@@ -15,7 +15,6 @@ export default {
     return apiClient.get('/entries')
   },
 
-  // eslint-disable-next-line
   getEntry(id: string): Promise<any> {
     return apiClient.get('/entries/' + id)
   },
@@ -25,8 +24,7 @@ export default {
     return apiClient.post('/entries', entry)
   },
 
-  // eslint-disable-next-line
-  // getClients(): Promise<any> {
-  //   return apiClient.get('/clients')
-  // },
+  deleteEntry(id: string) {
+    return apiClient.delete('/entries/' + id)
+  },
 }

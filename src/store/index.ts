@@ -58,6 +58,19 @@ export default createStore({
           console.log(error)
         })
     },
+
+    deleteEntry({ commit }, id) {
+      HoursService.deleteEntry(id).then(() => {
+        // TODO we can also delete that specific entry from the store
+        HoursService.getEntries()
+          .then((response) => {
+            commit('SET_ENTRIES', response.data)
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      })
+    },
   },
 
   modules: {},
