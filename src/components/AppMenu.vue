@@ -6,7 +6,7 @@
         <nav>
           <ul class="flex">
             <li>
-              <router-link to="/about">About</router-link>
+              <router-link to="/entry-create">Create</router-link>
             </li>
             <li class="ml-2">
               <router-link to="/time">Time</router-link>

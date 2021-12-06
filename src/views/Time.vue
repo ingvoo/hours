@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <h2 class="text-xl font-bold">19. November 2021</h2>
     <section class="mt-4">
-      <entry-day v-for="item in items" :key="item.id" :item="item" />
+      <entry-day v-for="entry in entries" :key="entry.id" :item="entry" />
     </section>
   </div>
 </template>
@@ -11,10 +11,21 @@
 import { defineComponent } from 'vue'
 import EntryDay from '@/components/EntryDay.vue'
 
+import HoursService from '@/services/HoursService'
+
+// interface Timers {
+//   id: string
+//   client: string
+//   task: string
+//   duration?: number
+//   timerStart?: number
+//   timerEnd?: number
+// }
+
 export default defineComponent({
   data() {
     return {
-      items: [
+      entries: [
         {
           id: 0,
           client: 'Ljomi',
@@ -37,6 +48,18 @@ export default defineComponent({
   },
   components: {
     EntryDay,
+  },
+
+  // TODO: Show/hide loader after call is finished
+  // TODO: Handle error better with a visual feedback
+  created() {
+    HoursService.getEntries()
+      .then((response) => {
+        this.entries = response.data
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   },
 })
 </script>

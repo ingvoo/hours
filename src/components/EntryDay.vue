@@ -7,7 +7,7 @@
     <div class="flex items-center">
       <span>{{ item?.duration }} minutes </span>
       <!-- <button class="button ml-2" @click="entryStart(item?.id)">Start</button> -->
-      <button class="button ml-2" @click="entryEdit(item?.id)">
+      <button class="button ml-2" @click="entryEdit">
         Edit item {{ item?.id }}
       </button>
     </div>

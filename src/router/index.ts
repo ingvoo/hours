@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Time.vue'),
   },
   {
+    path: '/entry-create',
+    name: 'EntryCreate',
+    component: () => import('../views/EntryCreate.vue'),
+  },
+  {
     path: '/edit/:id',
     name: 'Edit',
     component: () => import('../views/Edit.vue'),
