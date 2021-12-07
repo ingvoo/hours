@@ -6,7 +6,10 @@
         <nav>
           <ul class="flex">
             <li>
-              <router-link to="/entry-create">Create</router-link>
+              <router-link to="/entry-create">Create Entry</router-link>
+            </li>
+            <li class="ml-3">
+              <router-link to="/client-create">Create Client</router-link>
             </li>
           </ul>
         </nav>

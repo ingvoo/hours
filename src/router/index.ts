@@ -18,6 +18,12 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
     component: () => import('../views/EntryEdit.vue'),
   },
+
+  {
+    path: '/client-create',
+    name: 'ClientCreate',
+    component: () => import('../views/ClientCreate.vue'),
+  },
 ]
 
 const router = createRouter({

@@ -10,7 +10,6 @@ const apiClient = axios.create({
 })
 
 export default {
-  // eslint-disable-next-line
   getEntries(): Promise<any> {
     return apiClient.get('/entries')
   },
@@ -19,12 +18,15 @@ export default {
     return apiClient.get('/entries/' + id)
   },
 
-  // eslint-disable-next-line
   postEntry(entry: object) {
     return apiClient.post('/entries', entry)
   },
 
   deleteEntry(id: string) {
     return apiClient.delete('/entries/' + id)
+  },
+
+  postClient(client: object) {
+    return apiClient.post('/clients', client)
   },
 }

@@ -5,6 +5,7 @@ export default createStore({
   state: {
     user: 'ingvoo',
     entries: [] as any,
+    clients: [] as any,
     entry: {},
   },
 
@@ -19,6 +20,10 @@ export default createStore({
 
     ADD_ENTRIE(state, entry) {
       state.entries.push(entry)
+    },
+
+    ADD_CLIENT(state, client) {
+      state.clients.push(client)
     },
   },
 
@@ -70,6 +75,16 @@ export default createStore({
             console.log(error)
           })
       })
+    },
+
+    createClient({ commit }, client) {
+      HoursService.postClient(client)
+        .then(() => {
+          commit('ADD_CLIENT', client)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     },
   },
 

@@ -27,14 +27,16 @@
   ],
   "clients": [
     {
-      "id": "0",
-      "title": "Arkio",
-      "description": "lorem dolor"
+      "id": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "title": "My favorite Client",
+      "description": "some description",
+      "user": "ingvoo"
     },
     {
-      "id": "1",
-      "title": "fastforward",
-      "description": "lorem dolor"
+      "id": "be910dfe-4262-4065-a074-e372a99c6bc3",
+      "title": "Just another client",
+      "description": "describing the client",
+      "user": "ingvoo"
     }
   ]
 }
