@@ -10,7 +10,7 @@
     </div>
   </teleport>
 
-  <div class="container mx-auto mt-16">
+  <div class="container">
     <h1 class="text-xl font-bold">Create entry</h1>
 
     <form @submit.prevent="createEntry">

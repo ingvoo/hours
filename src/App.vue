@@ -1,7 +1,7 @@
 <template>
   <app-menu />
   <aside class="relative" id="notification-bar"></aside>
-  <div class="mt-8">
+  <div class="py-16">
     <router-view />
   </div>
   <app-footer class="mt-8" />

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mx-auto">
+    <div class="container">
       {{ $store.state.entry }}
       <h1 class="text-lg font-bold">Edit id: {{ id }}</h1>
 
