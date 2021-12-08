@@ -1,11 +1,11 @@
 <template>
   <div class="flex justify-between border-t py-3">
     <div>
-      <h3 class="text-lg font-bold">{{ item?.client }}</h3>
-      <h4 class="font-bold">{{ item?.task }}</h4>
+      <h3 class="text-lg font-bold">{{ item.client }}</h3>
+      <h4 class="font-bold">{{ item.task }}</h4>
     </div>
     <div class="flex items-center">
-      <span>{{ item?.duration }} minutes </span>
+      <span>{{ item.duration }} minutes </span>
       <!-- <button class="button ml-2" @click="entryStart(item?.id)">Start</button> -->
       <router-link
         :to="{ name: 'EntryEdit', params: { id: item.id } }"
@@ -33,7 +33,6 @@ export default defineComponent({
 
   methods: {
     deleteEntry(id: string) {
-      console.log(id)
       this.$store.dispatch('deleteEntry', id)
     },
   },

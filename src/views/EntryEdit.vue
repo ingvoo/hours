@@ -9,17 +9,9 @@
       <app-input label="Duration" v-model="entry.duration" />
       <app-input label="Description" v-model="entry.description" />
 
-      <label class="block mt-4" for="description">Description</label>
-      <textarea
-        name="description"
-        id="description"
-        cols="30"
-        rows="10"
-      ></textarea>
       <div class="mt-4">
         <button class="button">Save</button>
         <!-- Temporary handler to go back -->
-        <!-- Nice would be to add smooth transition when routing -->
         <button class="button ml-2" @click="$router.go(-1)">Cancel</button>
       </div>
     </div>
