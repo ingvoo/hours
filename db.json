@@ -37,6 +37,12 @@
       "title": "Just another client",
       "description": "describing the client",
       "user": "ingvoo"
+    },
+    {
+      "id": "7144d908-6280-4289-9994-23f69808c266",
+      "title": "New Client",
+      "description": "The description for the new client",
+      "user": "ingvoo"
     }
   ]
 }

@@ -5,7 +5,9 @@
     <form @submit.prevent="createClient">
       <app-input label="title" v-model="client.title" />
       <app-input label="Description" v-model="client.description" />
-      <button type="submit">Save client</button>
+      <button class="button inline-block mt-3" type="submit">
+        Save client
+      </button>
     </form>
   </div>
 </template>

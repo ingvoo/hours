@@ -4,7 +4,7 @@ import Time from '../views/Time.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Time',
     component: Time,
   },
   {
@@ -17,6 +17,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'EntryEdit',
     props: true,
     component: () => import('../views/EntryEdit.vue'),
+  },
+
+  {
+    path: '/clients',
+    name: 'Clients',
+    component: () => import('../views/Clients.vue'),
   },
 
   {

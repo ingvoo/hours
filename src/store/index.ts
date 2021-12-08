@@ -22,6 +22,10 @@ export default createStore({
       state.entries.push(entry)
     },
 
+    SET_CLIENTS(state, clients) {
+      state.clients = clients
+    },
+
     ADD_CLIENT(state, client) {
       state.clients.push(client)
     },
@@ -75,6 +79,16 @@ export default createStore({
             console.log(error)
           })
       })
+    },
+
+    getClients({ commit }) {
+      HoursService.getClients()
+        .then((response) => {
+          commit('SET_CLIENTS', response.data)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     },
 
     createClient({ commit }, client) {

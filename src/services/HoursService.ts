@@ -26,6 +26,10 @@ export default {
     return apiClient.delete('/entries/' + id)
   },
 
+  getClients() {
+    return apiClient.get('/clients')
+  },
+
   postClient(client: object) {
     return apiClient.post('/clients', client)
   },

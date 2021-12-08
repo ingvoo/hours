@@ -7,6 +7,10 @@
     <section v-else>
       <h2>There are no entries available yet</h2>
     </section>
+
+    <router-link class="inline-block button mt-4" to="/entry-create"
+      >Create Entry</router-link
+    >
   </div>
 </template>
 

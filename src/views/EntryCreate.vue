@@ -18,7 +18,7 @@
       <app-input label="task" v-model="entry.task" />
       <app-input label="Duration" v-model="entry.duration" type="number" />
       <app-input label="Description" v-model="entry.description" />
-      <button type="submit">Save entry</button>
+      <button class="button inline-block mt-3" type="submit">Save entry</button>
     </form>
   </div>
 </template>
