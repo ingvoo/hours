@@ -9,13 +9,9 @@
         onChange: ($event) => $emit('update:modelValue', $event.target.value),
       }"
     >
-      <option
-        v-for="option in options"
-        :value="option"
-        :key="option"
-        :selected="option === modelValue"
-      >
-        {{ option }}
+      <option value="" selected>{{ placeholder }}</option>
+      <option v-for="option in options" :value="option.id" :key="option.id">
+        {{ option.title }}
       </option>
     </select>
   </label>
@@ -25,15 +21,14 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  // methods: {
-  //   handleOnChange(event) {
-  //     return this.$emit('update:modelValue', event.target.value)
-  //   },
-  // },
   props: {
     label: {
       type: String,
       required: true,
+    },
+    placeholder: {
+      type: String,
+      default: 'Please select',
     },
     options: {
       type: Array,
@@ -46,5 +41,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped></style>

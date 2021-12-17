@@ -12,33 +12,12 @@
 
   <div class="container">
     <h1 class="text-xl font-bold">Create entry</h1>
-    <form class="mt-4" @submit.prevent="createEntry">
-      <label>
-        <span class="block">Client</span>
-        <select class="mt-1" name="client" v-model="entry.clientId">
-          <option value="">Pick a client</option>
-          <option v-for="client in clients" :value="client.id" :key="client.id">
-            {{ client.title }}
-          </option>
-        </select>
-      </label>
-
-      <!-- TODO: Make use of form select with object syntax and bind the id
-        <form-select options="clients" label="Clients" v-model="entry.client /> 
-      -->
-
-      <div class="mt-3">
-        <app-input label="Task" v-model="entry.task" />
-      </div>
-
-      <div class="mt-3">
-        <app-input label="Duration" v-model="entry.duration" type="number" />
-      </div>
-
-      <div class="mt-3">
-        <app-input label="Description" v-model="entry.description" />
-      </div>
-      <button class="button inline-block mt-3" type="submit">Save entry</button>
+    <form class="mt-4 flow" @submit.prevent="createEntry">
+      <form-select :options="clients" label="Clients" v-model="entry.client" />
+      <app-input label="Task" v-model="entry.task" />
+      <app-input label="Duration" v-model="entry.duration" type="number" />
+      <app-input label="Description" v-model="entry.description" />
+      <button class="button inline-block" type="submit">Save entry</button>
     </form>
   </div>
 </template>
@@ -49,10 +28,12 @@ import { defineComponent } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
 
 import AppInput from '@/components/AppInput.vue'
+import FormSelect from '@/components/FormSelect.vue'
 
 export default defineComponent({
   components: {
     AppInput,
+    FormSelect,
   },
   data() {
     return {
