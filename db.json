@@ -23,6 +23,24 @@
       "description": "lorem ipsum dolor",
       "duration": "30",
       "user": "ingvoo"
+    },
+    {
+      "id": "c802fd14-ee4e-4e73-b7d5-cbcd112c2741",
+      "clientId": "",
+      "task": "Develop",
+      "duration": "45",
+      "description": "Setup endpoints for creating posts",
+      "user": "ingvoo",
+      "client": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20"
+    },
+    {
+      "id": "0c0c1dcc-62cb-4ed2-a633-8d1f6d1bc241",
+      "clientId": "",
+      "task": "Meeting",
+      "duration": "30",
+      "description": "Meeting with Paul",
+      "user": "ingvoo",
+      "client": "be910dfe-4262-4065-a074-e372a99c6bc3"
     }
   ],
   "clients": [

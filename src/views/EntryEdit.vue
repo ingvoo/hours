@@ -4,10 +4,10 @@
       {{ $store.state.entry }}
       <h1 class="text-lg font-bold">Edit id: {{ id }}</h1>
 
-      <app-input label="Client" v-model="entry.client" />
-      <app-input label="Task" v-model="entry.task" />
-      <app-input label="Duration" v-model="entry.duration" />
-      <app-input label="Description" v-model="entry.description" />
+      <form-input label="Client" v-model="entry.client" />
+      <form-input label="Task" v-model="entry.task" />
+      <form-input label="Duration" v-model="entry.duration" />
+      <form-input label="Description" v-model="entry.description" />
 
       <div class="mt-4">
         <button class="button">Save</button>
@@ -20,11 +20,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import AppInput from '@/components/AppInput.vue'
+import FormInput from '@/components/FormInput.vue'
 
 export default defineComponent({
   components: {
-    AppInput,
+    FormInput,
   },
 
   props: ['id'],

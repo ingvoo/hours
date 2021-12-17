@@ -3,8 +3,8 @@
     <h1 class="text-xl font-bold">New Client</h1>
 
     <form @submit.prevent="createClient">
-      <app-input label="title" v-model="client.title" />
-      <app-input label="Description" v-model="client.description" />
+      <form-input label="title" v-model="client.title" />
+      <form-input label="Description" v-model="client.description" />
       <button class="button inline-block mt-3" type="submit">
         Save client
       </button>
@@ -17,11 +17,11 @@ import { defineComponent } from 'vue'
 
 import { v4 as uuidv4 } from 'uuid'
 
-import AppInput from '@/components/AppInput.vue'
+import FormInput from '@/components/FormInput.vue'
 
 export default defineComponent({
   components: {
-    AppInput,
+    FormInput,
   },
   data() {
     return {

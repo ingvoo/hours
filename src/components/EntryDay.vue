@@ -3,6 +3,7 @@
     <div>
       <h3 class="text-lg font-bold">{{ client }}</h3>
       <h4 class="font-bold">{{ item.task }}</h4>
+      <p>{{ item.description }}</p>
     </div>
     <div class="flex items-center">
       <span>{{ item.duration }} minutes </span>
