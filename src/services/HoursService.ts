@@ -22,6 +22,10 @@ export default {
     return apiClient.post('/entries', entry)
   },
 
+  updateEntry(id: string) {
+    return apiClient.put('/entries/' + id)
+  },
+
   deleteEntry(id: string) {
     return apiClient.delete('/entries/' + id)
   },
