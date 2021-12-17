@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between border-t py-3">
     <div>
-      <h3 class="text-lg font-bold">{{ item.client }}</h3>
+      <h3 class="text-lg font-bold">{{ client }}</h3>
       <h4 class="font-bold">{{ item.task }}</h4>
     </div>
     <div class="flex items-center">
@@ -27,7 +27,21 @@ export default defineComponent({
   props: {
     item: {
       type: Object,
-      required: false,
+      required: true,
+    },
+  },
+
+  computed: {
+    client() {
+      const client = this.$store.state.clients.find(
+        (client: any) => client.id === this.item.clientId
+      )
+
+      if (client) {
+        return client.title
+      }
+
+      return ''
     },
   },
 
@@ -35,6 +49,10 @@ export default defineComponent({
     deleteEntry(id: string) {
       this.$store.dispatch('deleteEntry', id)
     },
+  },
+
+  created() {
+    this.$store.dispatch('getClients')
   },
 })
 </script>
