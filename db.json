@@ -1,32 +1,8 @@
 {
   "entries": [
     {
-      "id": "0",
-      "client": "Ljomi",
-      "task": "Develop",
-      "description": "lorem ipsum",
-      "duration": "45",
-      "user": "ingvoo"
-    },
-    {
-      "id": "1",
-      "client": "fastforward",
-      "task": "Develop",
-      "description": "lorem ipsum",
-      "duration": "45",
-      "user": "ingvoo"
-    },
-    {
-      "id": "2",
-      "client": "Arkio",
-      "task": "Meeting",
-      "description": "lorem ipsum dolor",
-      "duration": "30",
-      "user": "ingvoo"
-    },
-    {
       "id": "c802fd14-ee4e-4e73-b7d5-cbcd112c2741",
-      "clientId": "",
+      "clientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
       "task": "Develop",
       "duration": "45",
       "description": "Setup endpoints for creating posts",
@@ -35,7 +11,7 @@
     },
     {
       "id": "0c0c1dcc-62cb-4ed2-a633-8d1f6d1bc241",
-      "clientId": "",
+      "clientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
       "task": "Meeting",
       "duration": "30",
       "description": "Meeting with Paul",

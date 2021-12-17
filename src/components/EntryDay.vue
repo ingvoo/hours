@@ -7,7 +7,6 @@
     </div>
     <div class="flex items-center">
       <span>{{ item.duration }} minutes </span>
-      <!-- <button class="button ml-2" @click="entryStart(item?.id)">Start</button> -->
       <router-link
         :to="{ name: 'EntryEdit', params: { id: item.id } }"
         class="button ml-2"
