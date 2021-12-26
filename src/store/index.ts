@@ -6,6 +6,8 @@ export default createStore({
     user: 'ingvoo',
     entries: [] as any,
     clients: [] as any,
+    projects: [] as any,
+    tasks: [] as any,
     entry: {},
   },
 
@@ -13,21 +15,24 @@ export default createStore({
     SET_ENTRIES(state, entries) {
       state.entries = entries
     },
-
     SET_ENTRY(state, entry) {
       state.entry = entry
     },
-
     ADD_ENTRIE(state, entry) {
       state.entries.push(entry)
     },
 
+    // Clients
     SET_CLIENTS(state, clients) {
       state.clients = clients
     },
-
     ADD_CLIENT(state, client) {
       state.clients.push(client)
+    },
+
+    // Projects
+    SET_PROJECTS(state, projects) {
+      state.projects = projects
     },
   },
 

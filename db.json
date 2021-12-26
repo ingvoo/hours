@@ -22,18 +22,21 @@
   "clients": [
     {
       "id": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "projectsId": ["foo", "fex"],
       "title": "My favorite Client",
       "description": "some description",
       "user": "ingvoo"
     },
     {
       "id": "be910dfe-4262-4065-a074-e372a99c6bc3",
+      "projectsId": [],
       "title": "Just another client",
       "description": "describing the client",
       "user": "ingvoo"
     },
     {
       "id": "7144d908-6280-4289-9994-23f69808c266",
+      "projectsId": ["boz"],
       "title": "New Client",
       "description": "The description for the new client",
       "user": "ingvoo"
@@ -42,11 +45,26 @@
   "projects": [
     {
       "id": "foo",
-      "ClientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
       "title": "Email campaign",
       "description": "Mailchimp campaign for Christmas",
       "budged": "600",
       "tasksIds": ["baz", "bor" ],
+      "user": "ingvoo"
+    },
+    {
+      "id": "fex",
+      "title": "Framework updates 2021",
+      "description": "Mailchimp campaign for Christmas",
+      "budged": "1200",
+      "tasksIds": ["baz" ],
+      "user": "ingvoo"
+    },
+    {
+      "id": "boz",
+      "title": "Relaunch 2020",
+      "description": "Relaunch main site",
+      "budged": "5000",
+      "tasksIds": ["baz"],
       "user": "ingvoo"
     }
   ],
