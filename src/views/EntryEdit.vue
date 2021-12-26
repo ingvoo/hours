@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <h1 class="text-lg font-bold">Entry: {{ id }}</h1>
+      <h1 class="text-h1">Entry: {{ id }}</h1>
       <form-input label="Client" v-model="entry.client" />
       <form-input label="Task" v-model="entry.task" />
       <form-input label="Duration" v-model="entry.duration" />

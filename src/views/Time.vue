@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-xl font-bold">19. November 2021</h2>
+    <h2 class="text-h1">19. November 2021</h2>
     <section class="mt-4" v-if="entries.length >= 1">
       <entry-day v-for="entry in entries" :key="entry.id" :item="entry" />
     </section>

@@ -11,7 +11,7 @@
   </teleport>
 
   <div class="container">
-    <h1 class="text-xl font-bold">Create entry</h1>
+    <h1 class="text-h1">Create entry</h1>
     <form class="mt-4 flow" @submit.prevent="createEntry">
       <form-select
         :options="clients"

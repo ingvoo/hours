@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Clients</h1>
+    <h1 class="text-h1">Clients</h1>
     <article
       v-for="(client, index) in clients"
       :key="index"

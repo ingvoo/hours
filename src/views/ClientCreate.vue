@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-xl font-bold">New Client</h1>
-
+    <h1 class="text-h1">New Client</h1>
     <form @submit.prevent="createClient">
       <form-input label="title" v-model="client.title" />
       <form-input label="Description" v-model="client.description" />
