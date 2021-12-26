@@ -1,15 +1,20 @@
 <template>
   <header class="py-3">
     <nav class="container">
-      <div class="flex items-center justify-end">
+      <div class="flex items-center justify-between">
         <ul class="flex items-center mr-4">
           <li>
             <router-link class="font-bold text-lg" to="/">Time</router-link>
           </li>
-          <li class="ml-3">
-            <router-link class="font-bold text-lg" to="/clients"
-              >Clients</router-link
-            >
+          <li class="ml-6">
+            <router-link class="font-bold text-lg" to="/projects">
+              Projects
+            </router-link>
+          </li>
+          <li class="ml-6">
+            <router-link class="font-bold text-lg" to="/clients">
+              Clients
+            </router-link>
           </li>
         </ul>
         <button @click="toggleDarkMode" class="button text-black">

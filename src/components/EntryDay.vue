@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between border-t py-3">
+  <article class="flex justify-between border-t py-3">
     <div>
       <h3 class="text-lg font-bold">{{ client }}</h3>
       <h4 class="font-bold">{{ item.task }}</h4>
@@ -17,7 +17,7 @@
         Delete
       </button>
     </div>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">

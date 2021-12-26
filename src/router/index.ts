@@ -18,13 +18,16 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
     component: () => import('../views/EntryEdit.vue'),
   },
-
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: () => import('../views/Projects.vue'),
+  },
   {
     path: '/clients',
     name: 'Clients',
     component: () => import('../views/Clients.vue'),
   },
-
   {
     path: '/client-create',
     name: 'ClientCreate',

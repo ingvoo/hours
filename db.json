@@ -38,5 +38,28 @@
       "description": "The description for the new client",
       "user": "ingvoo"
     }
+  ],
+  "projects": [
+    {
+      "id": "foo",
+      "ClientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "title": "Email campaign",
+      "description": "Mailchimp campaign for Christmas",
+      "budged": "600",
+      "tasksIds": ["baz", "bor" ],
+      "user": "ingvoo"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "baz",
+      "title": "Development",
+      "user": "ingvoo"
+    },
+    {
+      "id": "bor",
+      "title": "Design",
+      "user": "ingvoo"
+    }
   ]
 }
