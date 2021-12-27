@@ -1,7 +1,12 @@
 module.exports = {
   purge: [],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+    },
     extend: {},
     container: {
       center: true,
