@@ -22,6 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Client } from '../types'
 
 export default defineComponent({
   props: {
@@ -34,7 +35,7 @@ export default defineComponent({
   computed: {
     client() {
       const client = this.$store.state.clients.find(
-        (client: any) => client.id === this.item.clientId
+        (client: Client) => client.id === this.item.clientId
       )
 
       if (client) {

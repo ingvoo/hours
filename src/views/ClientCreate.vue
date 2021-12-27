@@ -13,9 +13,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
 import { v4 as uuidv4 } from 'uuid'
-
 import FormInput from '@/components/FormInput.vue'
 
 export default defineComponent({

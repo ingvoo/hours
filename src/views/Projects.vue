@@ -27,12 +27,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Client } from '../types'
 
 export default defineComponent({
   computed: {
     clients() {
       const allClients = this.$store.state.clients
-      return allClients.filter((item: any) => item.projectsId.length)
+      return allClients.filter((item: Client) => item.projectsId.length)
     },
   },
   created() {
