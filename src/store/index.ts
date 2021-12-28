@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { Entry } from '../types'
 import HoursService from '@/services/HoursService'
 
 export default createStore({
@@ -20,6 +21,16 @@ export default createStore({
     },
     ADD_ENTRIE(state, entry) {
       state.entries.push(entry)
+    },
+    UPDATE_ENTRY(state, entry) {
+      const { id, clientId, task, duration, description } = entry
+
+      const item = state.entries.find((entry: Entry) => entry.id === id)
+
+      item.clientId = clientId
+      item.task = task
+      item.duration = duration
+      item.description = description
     },
 
     // Clients
@@ -75,9 +86,7 @@ export default createStore({
 
     updateEntry({ commit }, id) {
       HoursService.updateEntry(id)
-        .then((response) => {
-          console.log(response)
-        })
+        .then(() => commit('UPDATE_ENTRY', id))
         .catch((error) => console.log(error))
     },
 

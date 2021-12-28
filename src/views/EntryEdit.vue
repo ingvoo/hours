@@ -2,7 +2,6 @@
   <div>
     <div class="container">
       <h1 class="text-h1">Entry: {{ id }}</h1>
-      <form-input label="Client" v-model="entry.client" />
       <form-input label="Task" v-model="entry.task" />
       <form-input label="Duration" v-model="entry.duration" />
       <form-input label="Description" v-model="entry.description" />
@@ -15,7 +14,7 @@
         <!-- Temporary handler to go back -->
       </div>
 
-      <code class="block text-xs p-4 my-2 bg-gray-100">
+      <code class="block text-xs p-4 my-2 bg-gray-100 dark:bg-gray-900">
         <pre>{{ $store.state.entry }}</pre>
       </code>
     </div>
@@ -24,6 +23,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Entry } from '../types'
 import FormInput from '@/components/FormInput.vue'
 
 export default defineComponent({
@@ -34,7 +34,7 @@ export default defineComponent({
   props: ['id'],
 
   computed: {
-    entry() {
+    entry(): Entry {
       return this.$store.state.entry
     },
   },
