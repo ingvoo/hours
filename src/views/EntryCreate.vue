@@ -19,6 +19,7 @@
         v-model="entry.clientId"
       />
       <form-input label="Task" v-model="entry.task" />
+      <form-input label="Date" v-model="entry.date" type="date" />
       <form-input label="Duration" v-model="entry.duration" type="number" />
       <form-input label="Description" v-model="entry.description" />
       <div>
@@ -51,6 +52,7 @@ export default defineComponent({
       success: false,
       entry: {
         id: '',
+        date: '',
         clientId: '',
         task: '',
         duration: '',

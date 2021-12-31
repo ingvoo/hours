@@ -3,6 +3,7 @@
     {
       "id": "c802fd14-ee4e-4e73-b7d5-cbcd112c2741",
       "clientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "date": "2021-12-30",
       "task": "Develop",
       "duration": "45",
       "description": "Setup endpoints for creating posts",
@@ -12,11 +13,21 @@
     {
       "id": "0c0c1dcc-62cb-4ed2-a633-8d1f6d1bc241",
       "clientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "date": "2021-12-26",
       "task": "Meeting",
       "duration": "30",
       "description": "Meeting with Paul",
       "user": "ingvoo",
       "client": "be910dfe-4262-4065-a074-e372a99c6bc3"
+    },
+    {
+      "id": "e7e07da7-d458-407c-b5b7-43d5c66a06db",
+      "clientId": "7d49fc11-47b6-4139-a3bd-1b123c0e2d20",
+      "date": "2021-12-31",
+      "task": "develop",
+      "duration": "45",
+      "description": "Creating something",
+      "user": "ingvoo"
     }
   ],
   "clients": [

@@ -1,6 +1,7 @@
 <template>
   <article class="flex justify-between border-t py-3">
     <div>
+      <small>{{ item.date }}</small>
       <h3 class="text-lg font-bold">{{ client }}</h3>
       <h4 class="font-bold">{{ item.task }}</h4>
       <p>{{ item.description }}</p>
