@@ -41,7 +41,7 @@ export default defineComponent({
       }
       this.$store.dispatch('createClient', client).then(() => {
         this.success = true
-        this.$router.push('/')
+        this.$router.push('/clients')
       })
     },
   },
