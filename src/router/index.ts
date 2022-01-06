@@ -4,6 +4,11 @@ import Time from '../views/Time.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'Home',
+    component: Time,
+  },
+  {
+    path: '/time/:id?',
     name: 'Time',
     component: Time,
   },
