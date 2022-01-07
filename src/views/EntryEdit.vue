@@ -7,15 +7,14 @@
       <form-input label="Description" v-model="entry.description" />
 
       <div class="mt-4">
-        <button class="button button-neutral" @click="$router.go(-1)">
+        <button class="button button-neutral" @click="$router.push('/')">
           Cancel
         </button>
         <button class="button ml-2" @click="updateEntry">Save</button>
-        <!-- Temporary handler to go back -->
       </div>
 
       <code class="block text-xs p-4 my-2 bg-gray-100 dark:bg-gray-900">
-        <pre>{{ $store.state.entry }}</pre>
+        <pre>{{ entry }}</pre>
       </code>
     </div>
   </div>
@@ -45,7 +44,11 @@ export default defineComponent({
 
   methods: {
     updateEntry() {
-      this.$store.dispatch('updateEntry', this.id).then(() => {
+      const payload = {
+        id: this.id,
+        entry: { ...this.entry },
+      }
+      this.$store.dispatch('updateEntry', payload).then(() => {
         this.$router.push('/')
       })
     },

@@ -15,16 +15,16 @@ export default {
     return apiClient.get('/entries')
   },
   getEntry(id: string): Promise<any> {
-    return apiClient.get('/entries/' + id)
+    return apiClient.get(`/entries/${id}`)
   },
   postEntry(entry: object) {
     return apiClient.post('/entries', entry)
   },
-  updateEntry(id: string) {
-    return apiClient.put('/entries/' + id)
+  updateEntry(id: string, entry: object) {
+    return apiClient.put(`/entries/${id}`, entry)
   },
   deleteEntry(id: string) {
-    return apiClient.delete('/entries/' + id)
+    return apiClient.delete(`/entries/${id}`)
   },
 
   // Clients
@@ -33,6 +33,9 @@ export default {
   },
   postClient(client: object) {
     return apiClient.post('/clients', client)
+  },
+  putClient(client: object) {
+    return apiClient.put('/clients', client)
   },
 
   // Projects

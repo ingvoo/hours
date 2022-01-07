@@ -12,24 +12,15 @@ export default createStore({
   },
 
   mutations: {
+    // Entries
     SET_ENTRIES(state, entries) {
       state.entries = entries
-    },
-    SET_ENTRY(state, entry) {
-      state.entry = entry
     },
     ADD_ENTRIE(state, entry) {
       state.entries.push(entry)
     },
-    UPDATE_ENTRY(state, entry) {
-      const { id, clientId, task, duration, description } = entry
-
-      const item = state.entries.find((entry: Entry) => entry.id === id)
-
-      item.clientId = clientId
-      item.task = task
-      item.duration = duration
-      item.description = description
+    SET_ENTRY(state, entry) {
+      state.entry = entry
     },
 
     // Clients
@@ -49,12 +40,8 @@ export default createStore({
   actions: {
     getEntries({ commit }) {
       HoursService.getEntries()
-        .then((response) => {
-          commit('SET_ENTRIES', response.data)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+        .then((response) => commit('SET_ENTRIES', response.data))
+        .catch((error) => console.log(error))
     },
 
     getEntry({ commit, state }, id) {
@@ -62,12 +49,8 @@ export default createStore({
 
       if (!existingEntry) {
         HoursService.getEntry(id)
-          .then((response) => {
-            commit('SET_ENTRY', response.data)
-          })
-          .catch((error) => {
-            console.log(error)
-          })
+          .then((response) => commit('SET_ENTRY', response.data))
+          .catch((error) => console.log(error))
       } else {
         state.entry = existingEntry
       }
@@ -75,17 +58,17 @@ export default createStore({
 
     createEntry({ commit }, entry) {
       HoursService.postEntry(entry)
-        .then(() => {
-          commit('ADD_ENTRIE', entry)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+        .then(() => commit('ADD_ENTRIE', entry))
+        .catch((error) => console.log(error))
     },
 
-    updateEntry({ commit }, id) {
-      HoursService.updateEntry(id)
-        .then(() => commit('UPDATE_ENTRY', id))
+    updateEntry({ commit }, payload) {
+      HoursService.updateEntry(payload.id, payload.entry)
+        .then(() =>
+          HoursService.getEntries()
+            .then((response) => commit('SET_ENTRIES', response.data))
+            .catch((error) => console.log(error))
+        )
         .catch((error) => console.log(error))
     },
 
@@ -102,6 +85,7 @@ export default createStore({
       })
     },
 
+    // Clients
     getClients({ commit }) {
       HoursService.getClients()
         .then((response) => {
@@ -120,6 +104,10 @@ export default createStore({
         .catch((error) => {
           console.log(error)
         })
+    },
+
+    updateClient({ commit }, client) {
+      HoursService.putClient(client)
     },
   },
 
