@@ -6,7 +6,6 @@ export interface Entry {
   task: string
   duration: number
   description: string
-  user: string
 }
 
 export interface Client {
@@ -14,5 +13,4 @@ export interface Client {
   projectsId: string[]
   title: string
   description: string
-  user: string
 }

@@ -27,7 +27,6 @@ export default defineComponent({
         id: '',
         title: '',
         description: '',
-        user: '',
       },
     }
   },
@@ -37,7 +36,6 @@ export default defineComponent({
       const client = {
         ...this.client,
         id: uuidv4(),
-        user: this.$store.state.user,
       }
       this.$store.dispatch('createClient', client).then(() => {
         this.success = true

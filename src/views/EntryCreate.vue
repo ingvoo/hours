@@ -57,7 +57,6 @@ export default defineComponent({
         task: '',
         duration: '',
         description: '',
-        user: '',
       },
     }
   },
@@ -77,7 +76,6 @@ export default defineComponent({
       const entry = {
         ...this.entry,
         id: uuidv4(),
-        user: this.$store.state.user,
       }
       this.$store.dispatch('createEntry', entry).then(() => {
         this.success = true

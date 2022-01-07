@@ -4,7 +4,6 @@ import HoursService from '@/services/HoursService'
 
 export default createStore({
   state: {
-    user: 'ingvoo',
     entries: [] as any,
     clients: [] as any,
     projects: [] as any,
