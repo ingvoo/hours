@@ -23,7 +23,7 @@
       <form-input label="Duration" v-model="entry.duration" type="number" />
       <form-input label="Description" v-model="entry.description" />
       <div>
-        <button class="button button-neutral" @click="$router.go(-1)">
+        <button class="button button-neutral" @click="$router.push('/')">
           Cancel
         </button>
         <button class="button inline-block ml-2" type="submit">
