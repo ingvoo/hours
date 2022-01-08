@@ -50,7 +50,6 @@ export default createStore({
 
     getEntry({ commit, state }, id) {
       const existingEntry = state.entries.find((e: any) => e.id === id)
-
       if (!existingEntry) {
         HoursService.getEntry(id)
           .then((response) => commit('SET_ENTRY', response.data))
@@ -101,16 +100,15 @@ export default createStore({
     },
 
     getClient({ commit, state }, id) {
-      console.log(id)
-      const existingClient = state.clients.find((e: any) => e.id === id)
-
-      if (!existingClient) {
-        HoursService.getClient(id)
-          .then((response) => commit('SET_CLIENT', response.data))
-          .catch((error) => console.log(error))
-      } else {
-        state.entry = existingClient
-      }
+      // TODO: check if client is already set then do nothing
+      // const existingClient = state.clients.find((e: any) => e.id === id)
+      // if (!existingClient) {
+      HoursService.getClient(id)
+        .then((response) => commit('SET_CLIENT', response.data))
+        .catch((error) => console.log(error))
+      // } else {
+      // state.entry = existingClient
+      // }
     },
 
     createClient({ commit }, client) {
