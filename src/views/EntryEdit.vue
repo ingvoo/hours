@@ -2,7 +2,9 @@
   <div>
     <div class="container">
       <h1 class="text-h1">Entry: {{ id }}</h1>
+      <form-select label="Client" v-model="entry.clientId" :options="clients" />
       <form-input label="Task" v-model="entry.task" />
+      <form-input label="Date" v-model="entry.date" type="date" />
       <form-input label="Duration" v-model="entry.duration" />
       <form-input label="Description" v-model="entry.description" />
 
@@ -13,7 +15,9 @@
         <button class="button ml-2" @click="updateEntry">Save</button>
       </div>
 
-      <code class="block text-xs p-4 my-2 bg-gray-100 dark:bg-gray-900">
+      <code
+        class="block text-xs p-2 my-4 rounded-md bg-gray-100 dark:bg-gray-900"
+      >
         <pre>{{ entry }}</pre>
       </code>
     </div>
@@ -22,12 +26,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
 import { Entry } from '../types'
+
 import FormInput from '@/components/FormInput.vue'
+import FormSelect from '@/components/FormSelect.vue'
 
 export default defineComponent({
   components: {
     FormInput,
+    FormSelect,
   },
 
   props: ['id'],
@@ -36,10 +44,14 @@ export default defineComponent({
     entry(): Entry {
       return this.$store.state.entry
     },
+    clients() {
+      return this.$store.state.clients
+    },
   },
 
   created() {
     this.$store.dispatch('getEntry', this.id)
+    this.$store.dispatch('getClients')
   },
 
   methods: {
