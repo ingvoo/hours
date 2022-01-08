@@ -43,6 +43,8 @@ export default defineComponent({
       return this.$store.state.entries
     },
     isToday() {
+      // TODO use a more modern way handling parameters
+      // https://medium.com/vue-by-example/learn-quickly-passing-params-as-props-with-vue-router-f4905735b747
       const id: any = this.$route.params.id
       if (id !== undefined) {
         return isToday(new Date(parseISO(id)))
