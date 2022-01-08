@@ -6,8 +6,26 @@
       :key="index"
       class="border-t mt-2 py-2"
     >
-      <h2>{{ client.title }}</h2>
-      <p>{{ client.description }}</p>
+      <div class="flex justify-between">
+        <div>
+          <h2>{{ client.title }}</h2>
+          <p>{{ client.description }}</p>
+        </div>
+        <div>
+          <router-link
+            :to="{ name: 'ClientEdit', params: { id: client.id } }"
+            class="button button-neutral"
+            >Edit</router-link
+          >
+          <button
+            class="button button-danger ml-2"
+            disabled
+            title="not implemented"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     </article>
     <router-link class="inline-block button mt-4" to="/client-create">
       Create client

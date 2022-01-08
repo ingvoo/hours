@@ -4,9 +4,14 @@
     <form @submit.prevent="createClient">
       <form-input label="title" v-model="client.title" />
       <form-input label="Description" v-model="client.description" />
-      <button class="button inline-block mt-3" type="submit">
-        Save client
-      </button>
+      <div class="mt-4">
+        <button class="button button-neutral" @click="$router.push('/')">
+          Cancel
+        </button>
+        <button class="button inline-block ml-2" type="submit">
+          Save client
+        </button>
+      </div>
     </form>
   </div>
 </template>

@@ -31,6 +31,9 @@ export default {
   getClients() {
     return apiClient.get('/clients')
   },
+  getClient(id: string): Promise<any> {
+    return apiClient.get(`/clients/${id}`)
+  },
   postClient(client: object) {
     return apiClient.post('/clients', client)
   },

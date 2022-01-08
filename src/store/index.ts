@@ -9,6 +9,7 @@ export default createStore({
     projects: [] as any,
     tasks: [] as any,
     entry: {},
+    client: {},
   },
 
   mutations: {
@@ -16,16 +17,19 @@ export default createStore({
     SET_ENTRIES(state, entries) {
       state.entries = entries
     },
-    ADD_ENTRIE(state, entry) {
-      state.entries.push(entry)
-    },
     SET_ENTRY(state, entry) {
       state.entry = entry
+    },
+    ADD_ENTRIE(state, entry) {
+      state.entries.push(entry)
     },
 
     // Clients
     SET_CLIENTS(state, clients) {
       state.clients = clients
+    },
+    SET_CLIENT(state, client) {
+      state.client = client
     },
     ADD_CLIENT(state, client) {
       state.clients.push(client)
@@ -94,6 +98,19 @@ export default createStore({
         .catch((error) => {
           console.log(error)
         })
+    },
+
+    getClient({ commit, state }, id) {
+      console.log(id)
+      const existingClient = state.clients.find((e: any) => e.id === id)
+
+      if (!existingClient) {
+        HoursService.getClient(id)
+          .then((response) => commit('SET_CLIENT', response.data))
+          .catch((error) => console.log(error))
+      } else {
+        state.entry = existingClient
+      }
     },
 
     createClient({ commit }, client) {
