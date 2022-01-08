@@ -15,9 +15,7 @@
         <button class="button ml-2" @click="updateEntry">Save</button>
       </div>
 
-      <code
-        class="block text-xs p-2 my-4 rounded-md bg-gray-100 dark:bg-gray-900"
-      >
+      <code class="code">
         <pre>{{ entry }}</pre>
       </code>
     </div>

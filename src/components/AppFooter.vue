@@ -1,8 +1,8 @@
 <template>
-  <footer class="bg-gray-100 py-8">
+  <footer class="py-8">
     <div class="container mx-auto">
       <h2 class="font-bold">Vuex store</h2>
-      <code class="text-xs mt-4 block">
+      <code class="code">
         <pre>{{ $store.state }}</pre>
       </code>
     </div>
