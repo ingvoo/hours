@@ -10,7 +10,7 @@
       <span>{{ item.duration }} minutes </span>
       <router-link
         :to="{ name: 'EntryEdit', params: { id: item.id } }"
-        class="button ml-2"
+        class="button button-neutral ml-2"
       >
         Edit
       </router-link>

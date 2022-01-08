@@ -17,7 +17,9 @@
             </router-link>
           </li>
         </ul>
-        <button @click="toggleDarkMode" class="button">Dark Mode</button>
+        <button @click="toggleDarkMode" class="button button-neutral">
+          Dark Mode
+        </button>
       </div>
     </nav>
   </header>
