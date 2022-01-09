@@ -26,9 +26,7 @@
         <button class="button button-neutral" @click="$router.push('/')">
           Cancel
         </button>
-        <button class="button inline-block ml-2" type="submit">
-          Save entry
-        </button>
+        <button class="button inline-block" type="submit">Save entry</button>
       </div>
     </form>
   </div>

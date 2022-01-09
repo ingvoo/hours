@@ -8,9 +8,7 @@
         <button class="button button-neutral" @click="$router.push('/')">
           Cancel
         </button>
-        <button class="button inline-block ml-2" type="submit">
-          Save client
-        </button>
+        <button class="button inline-block" type="submit">Save client</button>
       </div>
     </form>
   </div>

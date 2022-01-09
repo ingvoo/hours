@@ -8,7 +8,7 @@
     >
       <div class="flex justify-between">
         <div>
-          <h2>{{ client.title }}</h2>
+          <h2 class="text-lg">{{ client.title }}</h2>
           <p>{{ client.description }}</p>
         </div>
         <div>
@@ -17,11 +17,7 @@
             class="button button-neutral"
             >Edit</router-link
           >
-          <button
-            class="button button-danger ml-2"
-            disabled
-            title="not implemented"
-          >
+          <button class="button button-danger" disabled title="not implemented">
             Delete
           </button>
         </div>

@@ -12,7 +12,7 @@
         <button class="button button-neutral" @click="$router.push('/')">
           Cancel
         </button>
-        <button class="button ml-2" @click="updateEntry">Save</button>
+        <button class="button" @click="updateEntry">Save</button>
       </div>
 
       <code class="code">
